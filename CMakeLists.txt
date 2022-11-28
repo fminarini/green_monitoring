@@ -28,4 +28,9 @@ set_target_properties(${PROJECT_NAME} PROPERTIES PUBLIC_HEADER source/KIG.h)
 
 #set_target_properties(toml_lib PROPERTIES LINKER_LANGUAGE CXX)
 
-
+# For access to standard installation directory variables (CMAKE_INSTALL_xDIR).
+include(GNUInstallDirs)
+# Set library shared object and API header file to install.
+install(TARGETS ${PROJECT_NAME}
+    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+    PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
