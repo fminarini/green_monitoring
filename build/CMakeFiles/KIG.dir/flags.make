@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DKIG_EXPORTS
 
-CXX_INCLUDES = -I/home/fra/Sviluppo/KIG/KIG/toml/include
+CXX_INCLUDES = 
 
 CXX_FLAGS = -fPIC
 

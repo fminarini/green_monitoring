@@ -1,4 +1,3 @@
-/home/fra/Sviluppo/KIG/KIG/build/CMakeFiles/toml_lib.dir
 /home/fra/Sviluppo/KIG/KIG/build/CMakeFiles/KIG.dir
 /home/fra/Sviluppo/KIG/KIG/build/CMakeFiles/edit_cache.dir
 /home/fra/Sviluppo/KIG/KIG/build/CMakeFiles/rebuild_cache.dir

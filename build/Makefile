@@ -117,19 +117,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named toml_lib
-
-# Build rule for target.
-toml_lib: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 toml_lib
-.PHONY : toml_lib
-
-# fast build rule for target.
-toml_lib/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/toml_lib.dir/build.make CMakeFiles/toml_lib.dir/build
-.PHONY : toml_lib/fast
-
-#=============================================================================
 # Target rules for targets named KIG
 
 # Build rule for target.
@@ -175,7 +162,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... KIG"
-	@echo "... toml_lib"
 	@echo "... source/KIG.o"
 	@echo "... source/KIG.i"
 	@echo "... source/KIG.s"

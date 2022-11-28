@@ -20,7 +20,7 @@
 #include <tuple>
 #include <filesystem>
 #include <limits>
-#include "../toml/include/toml.hpp"
+#include <toml.hpp>
 
 /**
  *  @brief This data structure contains the information fetched from the

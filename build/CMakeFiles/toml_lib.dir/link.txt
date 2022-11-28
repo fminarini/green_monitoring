@@ -1,2 +1,0 @@
-/usr/bin/ar qc libtoml_lib.a 
-/usr/bin/ranlib libtoml_lib.a

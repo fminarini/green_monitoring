@@ -233,24 +233,6 @@ KIG_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 KIG_SOURCE_DIR:STATIC=/home/fra/Sviluppo/KIG/KIG
 
-//Value Computed by CMake
-kig_lib_BINARY_DIR:STATIC=/home/fra/Sviluppo/KIG/KIG/build/source
-
-//Value Computed by CMake
-kig_lib_IS_TOP_LEVEL:STATIC=OFF
-
-//Value Computed by CMake
-kig_lib_SOURCE_DIR:STATIC=/home/fra/Sviluppo/KIG/KIG/source
-
-//Value Computed by CMake
-toml_BINARY_DIR:STATIC=/home/fra/Sviluppo/KIG/KIG/build/include
-
-//Value Computed by CMake
-toml_IS_TOP_LEVEL:STATIC=OFF
-
-//Value Computed by CMake
-toml_SOURCE_DIR:STATIC=/home/fra/Sviluppo/KIG/KIG/include
-
 
 ########################
 # INTERNAL cache entries

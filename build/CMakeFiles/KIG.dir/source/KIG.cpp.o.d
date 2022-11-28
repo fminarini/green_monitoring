@@ -198,13 +198,12 @@ CMakeFiles/KIG.dir/source/KIG.cpp.o: \
  /usr/include/c++/11/bits/refwrap.h \
  /usr/include/c++/11/ext/aligned_buffer.h \
  /usr/include/c++/11/bits/fs_dir.h /usr/include/c++/11/bits/fs_ops.h \
- /home/fra/Sviluppo/KIG/KIG/source/../toml/include/toml.hpp \
- /home/fra/Sviluppo/KIG/KIG/source/../toml/include/toml/parser.hpp \
+ /usr/local/include/toml.hpp /usr/local/include/toml/parser.hpp \
  /usr/include/c++/11/cstring /usr/include/string.h /usr/include/strings.h \
- /home/fra/Sviluppo/KIG/KIG/source/../toml/include/toml/combinator.hpp \
- /usr/include/c++/11/iterator /usr/include/c++/11/bits/stream_iterator.h \
- /home/fra/Sviluppo/KIG/KIG/source/../toml/include/toml/region.hpp \
- /usr/include/c++/11/memory /usr/include/c++/11/bits/stl_tempbuf.h \
+ /usr/local/include/toml/combinator.hpp /usr/include/c++/11/iterator \
+ /usr/include/c++/11/bits/stream_iterator.h \
+ /usr/local/include/toml/region.hpp /usr/include/c++/11/memory \
+ /usr/include/c++/11/bits/stl_tempbuf.h \
  /usr/include/c++/11/bits/stl_raw_storage_iter.h \
  /usr/include/c++/11/bits/align.h \
  /usr/include/c++/11/bits/shared_ptr_atomic.h \
@@ -223,30 +222,21 @@ CMakeFiles/KIG.dir/source/KIG.cpp.o: \
  /usr/include/c++/11/bits/enable_special_members.h \
  /usr/include/c++/11/bits/node_handle.h \
  /usr/include/c++/11/bits/unordered_map.h \
- /usr/include/c++/11/bits/erase_if.h \
- /home/fra/Sviluppo/KIG/KIG/source/../toml/include/toml/color.hpp \
- /home/fra/Sviluppo/KIG/KIG/source/../toml/include/toml/result.hpp \
- /home/fra/Sviluppo/KIG/KIG/source/../toml/include/toml/traits.hpp \
- /home/fra/Sviluppo/KIG/KIG/source/../toml/include/toml/from.hpp \
- /home/fra/Sviluppo/KIG/KIG/source/../toml/include/toml/into.hpp \
- /home/fra/Sviluppo/KIG/KIG/source/../toml/include/toml/version.hpp \
- /usr/include/c++/11/forward_list /usr/include/c++/11/bits/forward_list.h \
+ /usr/include/c++/11/bits/erase_if.h /usr/local/include/toml/color.hpp \
+ /usr/local/include/toml/result.hpp /usr/local/include/toml/traits.hpp \
+ /usr/local/include/toml/from.hpp /usr/local/include/toml/into.hpp \
+ /usr/local/include/toml/version.hpp /usr/include/c++/11/forward_list \
+ /usr/include/c++/11/bits/forward_list.h \
  /usr/include/c++/11/bits/forward_list.tcc \
- /home/fra/Sviluppo/KIG/KIG/source/../toml/include/toml/utility.hpp \
- /home/fra/Sviluppo/KIG/KIG/source/../toml/include/toml/lexer.hpp \
- /home/fra/Sviluppo/KIG/KIG/source/../toml/include/toml/types.hpp \
- /home/fra/Sviluppo/KIG/KIG/source/../toml/include/toml/comments.hpp \
- /home/fra/Sviluppo/KIG/KIG/source/../toml/include/toml/datetime.hpp \
- /home/fra/Sviluppo/KIG/KIG/source/../toml/include/toml/string.hpp \
- /home/fra/Sviluppo/KIG/KIG/source/../toml/include/toml/value.hpp \
- /home/fra/Sviluppo/KIG/KIG/source/../toml/include/toml/exception.hpp \
- /home/fra/Sviluppo/KIG/KIG/source/../toml/include/toml/source_location.hpp \
- /home/fra/Sviluppo/KIG/KIG/source/../toml/include/toml/storage.hpp \
- /home/fra/Sviluppo/KIG/KIG/source/../toml/include/toml/literal.hpp \
- /home/fra/Sviluppo/KIG/KIG/source/../toml/include/toml/parser.hpp \
- /home/fra/Sviluppo/KIG/KIG/source/../toml/include/toml/serializer.hpp \
- /usr/include/c++/11/cmath /usr/include/math.h \
- /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+ /usr/local/include/toml/utility.hpp /usr/local/include/toml/lexer.hpp \
+ /usr/local/include/toml/types.hpp /usr/local/include/toml/comments.hpp \
+ /usr/local/include/toml/datetime.hpp /usr/local/include/toml/string.hpp \
+ /usr/local/include/toml/value.hpp /usr/local/include/toml/exception.hpp \
+ /usr/local/include/toml/source_location.hpp \
+ /usr/local/include/toml/storage.hpp /usr/local/include/toml/literal.hpp \
+ /usr/local/include/toml/parser.hpp \
+ /usr/local/include/toml/serializer.hpp /usr/include/c++/11/cmath \
+ /usr/include/math.h /usr/include/x86_64-linux-gnu/bits/math-vector.h \
  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
@@ -266,6 +256,5 @@ CMakeFiles/KIG.dir/source/KIG.cpp.o: \
  /usr/include/c++/11/tr1/modified_bessel_func.tcc \
  /usr/include/c++/11/tr1/poly_hermite.tcc \
  /usr/include/c++/11/tr1/poly_laguerre.tcc \
- /usr/include/c++/11/tr1/riemann_zeta.tcc \
- /home/fra/Sviluppo/KIG/KIG/source/../toml/include/toml/get.hpp \
- /home/fra/Sviluppo/KIG/KIG/source/../toml/include/toml/macros.hpp
+ /usr/include/c++/11/tr1/riemann_zeta.tcc /usr/local/include/toml/get.hpp \
+ /usr/local/include/toml/macros.hpp

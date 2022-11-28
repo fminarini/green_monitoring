@@ -63,7 +63,6 @@ CMAKE_BINARY_DIR = /home/fra/Sviluppo/KIG/KIG/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/toml_lib.dir/all
 all: CMakeFiles/KIG.dir/all
 .PHONY : all
 
@@ -72,35 +71,8 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/toml_lib.dir/clean
 clean: CMakeFiles/KIG.dir/clean
 .PHONY : clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/toml_lib.dir
-
-# All Build rule for target.
-CMakeFiles/toml_lib.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/toml_lib.dir/build.make CMakeFiles/toml_lib.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/toml_lib.dir/build.make CMakeFiles/toml_lib.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/fra/Sviluppo/KIG/KIG/build/CMakeFiles --progress-num=3 "Built target toml_lib"
-.PHONY : CMakeFiles/toml_lib.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/toml_lib.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fra/Sviluppo/KIG/KIG/build/CMakeFiles 1
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/toml_lib.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fra/Sviluppo/KIG/KIG/build/CMakeFiles 0
-.PHONY : CMakeFiles/toml_lib.dir/rule
-
-# Convenience name for target.
-toml_lib: CMakeFiles/toml_lib.dir/rule
-.PHONY : toml_lib
-
-# clean rule for target.
-CMakeFiles/toml_lib.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/toml_lib.dir/build.make CMakeFiles/toml_lib.dir/clean
-.PHONY : CMakeFiles/toml_lib.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/KIG.dir
