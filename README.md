@@ -90,3 +90,11 @@ sudo ldconfig
 A small program `mwe.cpp` has been uploaded in this repo to show a minimal working example of the library.
 The user can adopt it "as is" or customize its few parameters.
 Each function will be documented in an external Doc page.
+
+### Bibliography
+
+[1] Jones, N. "How to stop data centres from gobbling up the world's electricity", Nature, 2018.
+
+[2] Lannelongue, L. et al. "Green Algorithms: Quantifying the Carbon Footprint of Computation", Advanced Science, 2021.
+
+[3] Wright, L.A. et al. "Carbon footprinting: towards a universally accepted definition, Carbon Management, 2014.
