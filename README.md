@@ -25,7 +25,7 @@ behaviour of algorithms as well as computing infrastructures with a view
 to better leveraging said resources.</p>
 
 # Quick Start
-## System pre-requisites ##
+## System pre-requisites
 To build the library, your machine should have:
 
     - g++ supporting c++17 standard
@@ -41,7 +41,7 @@ in a terminal window.
 In case you're not meeting the requirements, consult your distro manual to find
 out how to set your environment properly.
 
-### Library pre-requisites ###
+### Library pre-requisites
 The library relies on only one external library which is provided here:
 `https://github.com/ToruNiina/toml11`
 
@@ -55,7 +55,7 @@ cmake ..
 make install
 ```
 
-## Download KIG ##
+### Download KIG 
 In order to download KIG, please enter the following commands on your terminal.
 ```
 mkdir <dir_name>
@@ -65,7 +65,7 @@ git init
 git clone "<LINK>"
 ```
 
-## Test download and Install KIG ##
+### Test download and Install KIG 
 Given the previous step was successfully completed, before installing the
 library it is advisable to test the build.
 
@@ -78,7 +78,7 @@ make all
 ```
 It should bring 0 warnings and 0 errors.
 
-## Install KIG library ##
+### Install KIG library
 Once the build has been tested, installing KIG only requires these two commands:
 ```
 sudo make install
@@ -91,7 +91,7 @@ A small program `mwe.cpp` has been uploaded in this repo to show a minimal worki
 The user can adopt it "as is" or customize its few parameters.
 Each function will be documented in an external Doc page.
 
-### Bibliography
+## Bibliography ##
 
 [1] Jones, N. "How to stop data centres from gobbling up the world's electricity", Nature, 2018.
 
