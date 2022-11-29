@@ -24,7 +24,9 @@ detailed data, such tool should also trigger meta-analyses on the
 behaviour of algorithms as well as computing infrastructures with a view
 to better leveraging said resources.</p>
 
-# Quick Start
+Quick Start
+====================
+
 ## System pre-requisites
 To build the library, your machine should have:
 
