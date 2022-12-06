@@ -11,6 +11,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.22.1/CMakeCCompiler.cmake"
   "CMakeFiles/3.22.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.22.1/CMakeSystem.cmake"
+  "../source/KIG.pc.in"
   "/usr/share/cmake-3.22/Modules/CMakeCCompiler.cmake.in"
   "/usr/share/cmake-3.22/Modules/CMakeCCompilerABI.c"
   "/usr/share/cmake-3.22/Modules/CMakeCInformation.cmake"
@@ -91,6 +92,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-3.22/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake"
   "/usr/share/cmake-3.22/Modules/Compiler/zOS-C-DetermineCompiler.cmake"
   "/usr/share/cmake-3.22/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake"
+  "/usr/share/cmake-3.22/Modules/GNUInstallDirs.cmake"
   "/usr/share/cmake-3.22/Modules/Internal/FeatureTesting.cmake"
   "/usr/share/cmake-3.22/Modules/Platform/Linux-Determine-CXX.cmake"
   "/usr/share/cmake-3.22/Modules/Platform/Linux-GNU-C.cmake"
@@ -113,6 +115,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/3.22.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.22.1/CMakeCCompiler.cmake"
   "CMakeFiles/3.22.1/CMakeCXXCompiler.cmake"
+  "KIG.pc"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 

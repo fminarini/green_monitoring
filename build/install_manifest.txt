@@ -1,0 +1,5 @@
+/usr/local/lib/libKIG.so.0.1
+/usr/local/lib/libKIG.so.0
+/usr/local/lib/libKIG.so
+/usr/local/include/KIG.h
+/usr/local/lib/pkgconfig/KIG.pc

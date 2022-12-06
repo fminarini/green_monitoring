@@ -22,6 +22,10 @@ void pullConfig (HWconfig& hw, std::string PATH) {
     assert(std::filesystem::exists(std::filesystem::path{PATH}));
     
     toml::value config = toml::parse(PATH);
+    
+    const auto& exp_name = toml::find(config, "owner");
+    hw.exp_name = toml::find<std::string>(exp_name, "title");
+    
     const auto& infra = toml::find(config, "infrastructure");
     
     hw.root_folder = toml::find<std::string>(infra, "root_folder");
@@ -106,7 +110,7 @@ double fetchMem (std::string PATH_MEM) {
         memstat.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); 
     }
     std::getline(memstat, mem);
-    std::cout << "allocated memory" << mem << '\n';
+    //std::cout << "allocated memory" << mem << '\n';
     
     std::stringstream s (mem);
     std::string temp;
@@ -265,7 +269,7 @@ double carbonFootprint (std::vector<double>& cpu_data, std::vector<double>& mem_
 void makeReport(HWconfig& hw, double et, double footprint) {
 	assert(et != 0 && footprint != 0);
 
-	std::string experimental_data = "X & X & X & "+ 
+	std::string experimental_data = hw.exp_name + " & X & X & "+ 
 									std::to_string(et) + 
 									" & " + 
 									std::to_string(footprint) + 

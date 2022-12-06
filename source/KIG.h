@@ -39,6 +39,7 @@ struct HWconfig {
     double carbon_intensity;        /**< Carbon cost (by region) of producing electrical power                         */
     double pue;                     /**< Power usage effectiveness metric for the PC or computing facility             */
     double ram_power_usage;         /**< Watts used by RAM                                                             */
+    std::string exp_name;			/**< Name of the computing experiment being run									   */
     std::string arch;               /**< Architecture of CPU on board                                                  */
     std::string root_folder;        /**< Path of the folder containing process related data, usually /proc/            */
     std::string cpu_stat_file;      /**< Path of the file containing CPU usage related metrics, usually /stat/         */
