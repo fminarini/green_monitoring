@@ -245,6 +245,9 @@ double carbonFootprint (std::vector<double>& cpu_data, std::vector<double>& mem_
     double core_consumption = hw.n_cpu * hw.cpu_tdp * avg_CPU_usage;
     double mem_consumption = avg_mem_alloc * hw.ram_power_usage;
     
+    std::cout << "ABSORBED W: " << core_consumption + mem_consumption << '\n';
+    std::cout << "ELAPSED T: " << et << '\n';
+
     return hw.carbon_intensity * (et * (core_consumption + mem_consumption) * hw.pue * 0.001);
     
 }
