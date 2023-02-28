@@ -87,12 +87,6 @@ sudo make install
 sudo ldconfig
 ```
 
-## M.W.E. ##
-
-A small program `mwe.cpp` has been uploaded in this repo to show a minimal working example of the library.
-The user can adopt it "as is" or customize its few parameters.
-Each function will be documented in an external Doc page.
-
 ## Bibliography ##
 
 [1] Jones, N. "How to stop data centres from gobbling up the world's electricity", Nature, 2018.
