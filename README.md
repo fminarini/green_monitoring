@@ -32,28 +32,30 @@ To build the library, your machine should have:
 
     - g++ supporting c++17 standard
     - cmake (min.required version 3.20)
+    - pkg-config
+    - git
 
-To check if your machine satisfies the requirements, you can launch 
-```
-g++ --version
-cmake --version
-```
-in a terminal window.
+package installation varies across different distros. As an example, if you use Aptitude:
 
-In case you're not meeting the requirements, consult your distro manual to find
-out how to set your environment properly.
+```
+sudo apt-get install -y build-essential
+sudo apt-get install cmake
+sudo apt-get install pkg-config
+sudo apt-get install git
+```
 
 ### Library pre-requisites
-The library relies on only one external library which is provided here:
-`https://github.com/ToruNiina/toml11`
+The library relies on only one external library, which is provided here:
+`https://github.com/ToruNiina/toml11` (MIT LICENSED)
 
 we suggest cloning the repo and build the software with cmake. 
 ```
-git clone <REPO>
-cd <CLONED_REPO_FOLDER>
+git clone https://github.com/ToruNiina/toml11
+cd toml11
 mkdir build
 cd build
 cmake ..
+make all
 make install
 ```
 
@@ -86,6 +88,24 @@ Once the build has been tested, installing KIG only requires these two commands:
 sudo make install
 sudo ldconfig
 ```
+
+Containerized Solution
+=========================
+
+If you don't want (or you're not allowed) to install the library, there is a containerized solution publicly available on DockerHub.
+
+In order to run KIG from the containerized solution, these are the commands to run it "as an executable":
+
+```
+docker run -dit --name <container_name> --pid host kig_df bash
+docker exec -it <container_name> ./KIG_ex $(pgrep -f "<monitored_activity>" | awk 'ORS=" "')
+```
+You can also use the container interactively:
+```
+docker run -it --name <container_name> --pid host kig_df bash
+```
+your user is "kig_user" and your home is "/home/kig_user". There you will find MWE.cpp (and its compiled executable ./KIG_ex). LaTex dummy reports will be hereby saved.
+
 
 ## Bibliography ##
 
