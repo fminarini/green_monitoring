@@ -106,6 +106,14 @@ docker run -it --name <container_name> --pid host kig_df bash
 ```
 your user is "kig_user" and your home is "/home/kig_user". There you will find MWE.cpp (and its compiled executable ./KIG_ex). LaTex dummy reports will be hereby saved.
 
+CAVEAT: on the container, only a dummy configuration file is mounted in /conf folder. If you run the container interactively, you can change it as you wish with nano (or any other editor).
+
+If you run the container "executable-wise", you should add:
+```
+--mount type=bind,source="$(pwd)"/<folder_with_toml_file>,target=/conf
+```
+to the ```docker run``` instruction.
+
 
 ## Bibliography ##
 
