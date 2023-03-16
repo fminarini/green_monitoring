@@ -39,9 +39,9 @@ package installation varies across different distros. As an example, if you use 
 
 ```
 sudo apt-get install -y build-essential
-sudo apt-get install cmake
-sudo apt-get install pkg-config
-sudo apt-get install git
+sudo apt-get install -y cmake
+sudo apt-get install -y pkg-config
+sudo apt-get install -y git
 ```
 
 ### Library pre-requisites
@@ -89,22 +89,32 @@ sudo make install
 sudo ldconfig
 ```
 
-Containerized Solution
+CONTAINERIZED SOLUTION
 =========================
 
 If you don't want (or you're not allowed) to install the library, there is a containerized solution publicly available on DockerHub.
 
 In order to run KIG from the containerized solution, these are the commands to run it "as an executable":
 
+### EXECUTABLE-WISE ###
 ```
 docker run -dit --name <container_name> --pid host kig_df bash
 docker exec -it <container_name> ./KIG_ex $(pgrep -f "<monitored_activity>" | awk 'ORS=" "')
 ```
+The LaTeX report, if required, will be created in the home of kig_user.
+
+### INTERACTIVE MODE ###
 You can also use the container interactively:
 ```
 docker run -it --name <container_name> --pid host kig_df bash
 ```
-your user is "kig_user" and your home is "/home/kig_user". There you will find MWE.cpp (and its compiled executable ./KIG_ex). LaTex dummy reports will be hereby saved.
+your user is "kig_user" and your home is "/home/kig_user". There you will find MWE.cpp (and its compiled executable ./KIG_ex). 
+To monitor a process, launch:
+
+```
+./KIG_ex $(pgrep -f "<monitored_activity>" | awk 'ORS=" "')
+```
+The LaTeX report, if required, will be created in the home of kig_user.
 
 CAVEAT: on the container, only a dummy configuration file is mounted in /conf folder. If you run the container interactively, you can change it as you wish with nano (or any other editor).
 
