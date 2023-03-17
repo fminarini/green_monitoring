@@ -96,17 +96,18 @@ If you don't want (or you're not allowed) to install the library, there is a con
 
 In order to run KIG from the containerized solution, these are the commands to run it "as an executable":
 
-### EXECUTABLE-WISE ###
+### EXECUTABLE-LIKE CONTAINER ###
 ```
-docker run -dit --name <container_name> --pid host kig_df bash
+docker run -dit --name <container_name> --pid host --mount type=bind,source="$(pwd)"/<folder_with_toml_file>,target=/conf <IMAGE_NAME> bash
 docker exec -it <container_name> ./KIG_ex $(pgrep -f "<monitored_activity>" | awk 'ORS=" "')
 ```
 The LaTeX report, if required, will be created in the home of kig_user.
 
+
 ### INTERACTIVE MODE ###
 You can also use the container interactively:
 ```
-docker run -it --name <container_name> --pid host kig_df bash
+docker run -it --name <container_name> --pid host --mount type=bind,source="$(pwd)"/<folder_with_toml_file>,target=/conf <IMAGE_NAME> bash
 ```
 your user is "kig_user" and your home is "/home/kig_user". There you will find MWE.cpp (and its compiled executable ./KIG_ex). 
 To monitor a process, launch:
@@ -115,14 +116,6 @@ To monitor a process, launch:
 ./KIG_ex $(pgrep -f "<monitored_activity>" | awk 'ORS=" "')
 ```
 The LaTeX report, if required, will be created in the home of kig_user.
-
-CAVEAT: on the container, only a dummy configuration file is mounted in /conf folder. If you run the container interactively, you can change it as you wish with nano (or any other editor).
-
-If you run the container "executable-wise", you should add:
-```
---mount type=bind,source="$(pwd)"/<folder_with_toml_file>,target=/conf
-```
-to the ```docker run``` instruction.
 
 
 ## Bibliography ##
