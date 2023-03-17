@@ -1,0 +1,7 @@
+/home/fra/Sviluppo/KIG/KIG/build/CMakeFiles/KIG.dir
+/home/fra/Sviluppo/KIG/KIG/build/CMakeFiles/edit_cache.dir
+/home/fra/Sviluppo/KIG/KIG/build/CMakeFiles/rebuild_cache.dir
+/home/fra/Sviluppo/KIG/KIG/build/CMakeFiles/list_install_components.dir
+/home/fra/Sviluppo/KIG/KIG/build/CMakeFiles/install.dir
+/home/fra/Sviluppo/KIG/KIG/build/CMakeFiles/install/local.dir
+/home/fra/Sviluppo/KIG/KIG/build/CMakeFiles/install/strip.dir

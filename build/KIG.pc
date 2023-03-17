@@ -1,0 +1,12 @@
+prefix=/usr/local
+exec_prefix=/usr/local
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: KIG
+Description: Keep IT Green
+Version: 0.1
+
+Requires:
+Libs: -L${libdir} -lKIG
+Cflags: -I${includedir}
