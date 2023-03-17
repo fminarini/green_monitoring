@@ -118,6 +118,33 @@ To monitor a process, launch:
 The LaTeX report, if required, will be created in the home of kig_user.
 
 
+Config file redaction
+==========================
+As a simple guideline for correctly redacting the configuration .toml file, you can refer to the following dummy file:
+```
+[owner]
+name = "XXX"
+title = "YYY"
+
+[infrastructure]
+root_folder = "/proc/"              #location/naming of /proc folder on your system
+cpu_stat_file = "/stat"             #location/naming of /stat file in /proc
+mem_stat_file = "/status"           #location/naming of /status file in /proc
+
+cpu_family = "Skylake"				#cpu_family (useful for comparisons)
+cpu_tdp = 8					        #value in W per-core
+n_cpu = 2					        #number of usable physical chips on board.
+clock_ticks = 100				    #output of getconf CLK_TCK, gives equivalence to seconds of clocktick
+ram_family = "DDR4"				    #ram family (useful for comparisons)
+ram_freq = 2133					    #ideally frequency tells you the wattage required
+ram_slots = 1					    #active ram slots (optional info)
+
+[energy]
+carbon_intensity = 100.0				#Carbon Intensity in your country in g/kWh
+power_usage_efficiency = 1.01           #PUE of the cluster/machine running code. Use your national avg if you cannot get detailed data
+```
+
+
 ## Bibliography ##
 
 [1] Jones, N. "How to stop data centres from gobbling up the world's electricity", Nature, 2018.
