@@ -1,1 +1,1 @@
-https://fminarini.github.io/KIG/html/index.html
+* [KIG_library_documentation] https://fminarini.github.io/KIG/html/index.html
