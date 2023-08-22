@@ -143,9 +143,9 @@ void update (CPUsage& c, std::vector<std::string>& v, struct sysinfo T) {
     assert(v.size() != 0);
 
     sysinfo(&T);
-    c.utime = std::stoi(v[13]);//c.proc_buffer[13]);
-    c.stime = std::stoi(v[14]);
-    c.starttime = std::stoi(v[21]);
+    c.utime = std::stod(v[13]);//c.proc_buffer[13]);
+    c.stime = std::stod(v[14]);
+    c.starttime = std::stod(v[21]);
     c.up_time = T.uptime;
     //std::cout << "saving utime: " << c.proc_buffer[13] << '\n';
 
