@@ -43,7 +43,7 @@ int main (int argc, char** argv) {
 	    std::cout << mem_allocation << '\n';
             update(monitor, proc_buffer, s_info);
             cpu_usage_buffer.push_back(CPUusage(monitor, conf));
-	    std:cout << cpu_usage_buffer << '\n';
+	    std::cout << cpu_usage_buffer << '\n';
             flushBuffer(proc_buffer);
             sleep(10);
         } while (std::filesystem::exists(PROCESS_FOLDER))/*cpu_usage_buffer.size() != BUFFER_SIZE*/;
