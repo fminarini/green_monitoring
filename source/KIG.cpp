@@ -194,6 +194,7 @@ double CPUusage (CPUsage& c, HWconfig& hw) {
     c.elapsed_time = elapsed_time;
     //std::cout << elapsed_time << '\n';
     double cpu_usage = cpu_occupation/elapsed_time;             //this is actually a percentage
+    std::cout << "CPU usage: " << cpu_usage << '\n';
     return cpu_usage;
 
 }
@@ -245,14 +246,16 @@ double carbonFootprint (std::vector<double>& cpu_data, std::vector<double>& mem_
     double core_consumption = hw.n_cpu * hw.cpu_tdp * avg_CPU_usage;
     double mem_consumption = avg_mem_alloc * hw.ram_power_usage;
     
-    std::cout << "REQUESTED CORES" << hw.n_cpu << '\n';
-    std::cout << "TDP_PER_CORE" << hw.cpu_tdp << '\n';
-    std::cout << "AVG_CPU_USAGE" << avg_CPU_usage << '\n';
-    std::cout << "AVG_MEM_ALLOC (GB)" << avg_mem_alloc << '\n';
-    std::cout << "CORE W" << core_consumption << '\n';
-    std::cout << "MEM W" << mem_consumption << 'n';
+    std::cout << "REQUESTED CORES: " << hw.n_cpu << '\n';
+    std::cout << "TDP_PER_CORE: " << hw.cpu_tdp << '\n';
+    std::cout << "AVG_CPU_USAGE: " << avg_CPU_usage << '\n';
+    std::cout << "AVG_MEM_ALLOC (GB): " << avg_mem_alloc << '\n';
+    std::cout << "RAM W: " << hw.ram_power_usage << '\n';
+    std::cout << "CORE W: " << core_consumption << '\n';
+    std::cout << "MEM W: " << mem_consumption << 'n';
     std::cout << "ABSORBED W: " << core_consumption + mem_consumption << '\n';
     std::cout << "ELAPSED T: " << et << '\n';
+    std::cout << "PUE: " << hw.pue << '\n';
     
     return hw.carbon_intensity * (et * (core_consumption + mem_consumption) * hw.pue * 0.001);
     
