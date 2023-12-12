@@ -189,9 +189,10 @@ double CPUusage (CPUsage& c, HWconfig& hw) {
     //structures.
     
     c.starttime = c.starttime/hw.clock_ticks;                      //converting to seconds
-    double cpu_occupation = (c.utime + c.stime)/hw.clock_ticks;    //converting to seconds
+    double cpu_occupation = ((c.utime + c.stime)/hw.clock_ticks);    //converting to seconds
     double elapsed_time = (c.up_time - c.starttime);               //measured in seconds
     c.elapsed_time = elapsed_time;
+    std::cout << "CLK_TCK: " << hw.clock_ticks;
     std::cout << "OCCUPIED: " << cpu_occupation << '\n';
     std::cout << "ELAPSED: " << elapsed_time << '\n';
     double cpu_usage = cpu_occupation/elapsed_time;             //this is actually a percentage
