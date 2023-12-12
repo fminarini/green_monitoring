@@ -41,7 +41,7 @@ void pullConfig (HWconfig& hw, std::string PATH) {
     hw.carbon_intensity = toml::find<double>(energy, "carbon_intensity");     
     hw.pue = toml::find<double>(energy, "power_usage_efficiency");
     
-    if (toml::find<std::string>(infra, "ram_family")=="DDR4" && 
+    if (toml::find<std::string>(infra, "ram_family")=="COMMON" && 
         toml::find<int>(infra, "ram_slots")==1) {
             hw.ram_power_usage = 3;
     }
@@ -192,7 +192,8 @@ double CPUusage (CPUsage& c, HWconfig& hw) {
     double cpu_occupation = (c.utime + c.stime)/hw.clock_ticks;    //converting to seconds
     double elapsed_time = (c.up_time - c.starttime);               //measured in seconds
     c.elapsed_time = elapsed_time;
-    //std::cout << elapsed_time << '\n';
+    std::cout << "OCCUPIED: " << cpu_occupation << '\n';
+    std::cout << "ELAPSED: " << elapsed_time << '\n';
     double cpu_usage = cpu_occupation/elapsed_time;             //this is actually a percentage
     std::cout << "CPU usage: " << cpu_usage << '\n';
     return cpu_usage;
