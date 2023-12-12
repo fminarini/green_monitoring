@@ -258,7 +258,7 @@ double carbonFootprint (std::vector<double>& cpu_data, std::vector<double>& mem_
     std::cout << "AVG_MEM_ALLOC (GB): " << avg_mem_alloc << '\n';
     std::cout << "RAM W: " << hw.ram_power_usage << '\n';
     std::cout << "CORE W: " << core_consumption << '\n';
-    std::cout << "MEM W: " << mem_consumption << 'n';
+    std::cout << "MEM W: " << mem_consumption << '\n';
     std::cout << "ABSORBED W: " << core_consumption + mem_consumption << '\n';
     std::cout << "ELAPSED T: " << et << '\n';
     std::cout << "PUE: " << hw.pue << '\n';
