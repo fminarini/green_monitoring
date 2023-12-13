@@ -191,6 +191,7 @@ double CPUusage (CPUsage& c, HWconfig& hw) {
     c.starttime = c.starttime/hw.clock_ticks;                      //converting to seconds
     double utime_sec = c.utime / hw.clock_ticks;
     double stime_sec = c.stime / hw.clock_ticks;
+    std::cout << "UTIME_JIFF: " << c.utime << '\n';
     std::cout << "UTIME: " << utime_sec << '\n';
     std::cout << "STIME: " << stime_sec << '\n';
     double cpu_occupation = utime_sec + stime_sec;    		   //converting to seconds
