@@ -41,9 +41,9 @@ void pullConfig (HWconfig& hw, std::string PATH) {
     hw.carbon_intensity = toml::find<double>(energy, "carbon_intensity");     
     hw.pue = toml::find<double>(energy, "power_usage_efficiency");
 
-    size_in_gb = toml::find<int>(infra, "ram_size");
-    ram_pwcons = toml::find<int>(infra, "ram_power");
-    ram_unit = 8;
+    int size_in_gb = toml::find<int>(infra, "ram_size");
+    int ram_pwcons = toml::find<int>(infra, "ram_power");
+    int ram_unit = 8;
     
     hw.ram_power_usage = (size_in_gb/ram_unit)*ram_pwcons;
     /*if (toml::find<std::string>(infra, "ram_family")=="COMMON" && 
