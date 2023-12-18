@@ -41,15 +41,10 @@ void pullConfig (HWconfig& hw, std::string PATH) {
     hw.carbon_intensity = toml::find<double>(energy, "carbon_intensity");     
     hw.pue = toml::find<double>(energy, "power_usage_efficiency");
 
-    int size_in_gb = toml::find<int>(infra, "ram_size");
-    int ram_pwcons = toml::find<int>(infra, "ram_power");
-    int ram_unit = 8;
-    
-    hw.ram_power_usage = (size_in_gb/ram_unit)*ram_pwcons;
-    /*if (toml::find<std::string>(infra, "ram_family")=="COMMON" && 
+    if (toml::find<std::string>(infra, "ram_family")=="COMMON" && 
         toml::find<int>(infra, "ram_size")==1) {
-            hw.ram_power_usage = 3;
-    }*/
+            hw.ram_power_usage = 0.375;   // per-GB
+    }
 }
 
 /*!
@@ -256,7 +251,7 @@ double carbonFootprint (std::vector<double>& cpu_data, std::vector<double>& mem_
     auto avg_mem_alloc = mem_alloc/n_samples;
 
     double core_consumption = hw.n_cpu * hw.cpu_tdp * avg_CPU_usage;
-    double mem_consumption = hw.ram_power_usage;
+    double mem_consumption = avg_mem_alloc * hw.ram_power_usage;
     
     std::cout << "REQUESTED CORES: " << hw.n_cpu << '\n';
     std::cout << "TDP_PER_CORE: " << hw.cpu_tdp << '\n';
