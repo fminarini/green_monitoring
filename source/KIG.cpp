@@ -40,11 +40,16 @@ void pullConfig (HWconfig& hw, std::string PATH) {
     const auto& energy = toml::find(config, "energy");
     hw.carbon_intensity = toml::find<double>(energy, "carbon_intensity");     
     hw.pue = toml::find<double>(energy, "power_usage_efficiency");
+
+    size_in_gb = toml::find<int>(infra, "ram_size");
+    ram_pwcons = toml::find<int>(infra, "ram_power");
+    ram_unit = 8;
     
-    if (toml::find<std::string>(infra, "ram_family")=="COMMON" && 
-        toml::find<int>(infra, "ram_slots")==1) {
+    hw.ram_power_usage = (size_in_gb/ram_unit)*ram_pwcons;
+    /*if (toml::find<std::string>(infra, "ram_family")=="COMMON" && 
+        toml::find<int>(infra, "ram_size")==1) {
             hw.ram_power_usage = 3;
-    }
+    }*/
 }
 
 /*!
@@ -191,17 +196,17 @@ double CPUusage (CPUsage& c, HWconfig& hw) {
     c.starttime = c.starttime/hw.clock_ticks;                      //converting to seconds
     double utime_sec = c.utime / hw.clock_ticks;
     double stime_sec = c.stime / hw.clock_ticks;
-    std::cout << "UTIME_JIFF: " << c.utime << '\n';
-    std::cout << "UTIME: " << utime_sec << '\n';
-    std::cout << "STIME: " << stime_sec << '\n';
+    //std::cout << "UTIME_JIFF: " << c.utime << '\n';
+    //std::cout << "UTIME: " << utime_sec << '\n';
+    //std::cout << "STIME: " << stime_sec << '\n';
     double cpu_occupation = (utime_sec/hw.n_cpu) + stime_sec;    		   //converting to seconds
     double elapsed_time = (c.up_time - c.starttime);               //measured in seconds
     c.elapsed_time = elapsed_time;
-    std::cout << "CLK_TCK: " << hw.clock_ticks;
+    //std::cout << "CLK_TCK: " << hw.clock_ticks;
     std::cout << "OCCUPIED: " << cpu_occupation << '\n';
     std::cout << "ELAPSED: " << elapsed_time << '\n';
     double cpu_usage = cpu_occupation/elapsed_time;             //this is actually a percentage
-    std::cout << "CPU usage: " << cpu_usage << '\n';
+    //std::cout << "CPU usage: " << cpu_usage << '\n';
     return cpu_usage;
 
 }
@@ -251,7 +256,7 @@ double carbonFootprint (std::vector<double>& cpu_data, std::vector<double>& mem_
     auto avg_mem_alloc = mem_alloc/n_samples;
 
     double core_consumption = hw.n_cpu * hw.cpu_tdp * avg_CPU_usage;
-    double mem_consumption = avg_mem_alloc * hw.ram_power_usage;
+    double mem_consumption = hw.ram_power_usage;
     
     std::cout << "REQUESTED CORES: " << hw.n_cpu << '\n';
     std::cout << "TDP_PER_CORE: " << hw.cpu_tdp << '\n';
@@ -263,6 +268,7 @@ double carbonFootprint (std::vector<double>& cpu_data, std::vector<double>& mem_
     std::cout << "ABSORBED W: " << core_consumption + mem_consumption << '\n';
     std::cout << "ELAPSED T: " << et << '\n';
     std::cout << "PUE: " << hw.pue << '\n';
+    std::cout << "CARBON INTENSITY: " << hw.carbon_intensity << '\n';
     
     return hw.carbon_intensity * (et * (core_consumption + mem_consumption) * hw.pue * 0.001);
     
