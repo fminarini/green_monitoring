@@ -1,3 +1,6 @@
+
+![Schermata del 2024-09-20 16-32-05](https://github.com/user-attachments/assets/6a1651ce-c9d4-4c19-b271-dbfa8dde9c38)
+
 About 
 ==============================
 <p>Greenhouse gas (GHG) emissions have been recognized as accelerators of
